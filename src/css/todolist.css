@@ -1,0 +1,7 @@
+.list-wrapper {
+    max-height: 250px;
+    padding: 2px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
