@@ -36,6 +36,13 @@ class App extends React.Component {
     };
 
     addTask = (name) => {
+        const ifExist = this.state.tasks.find((e) => name === e.name);
+
+        if (ifExist) {
+            alert(`La tarea ${name} ya existe... Intente otro nombre! :)`);
+            return;
+        }
+
         this.setState({
             tasks: this.state.tasks.concat([{ name, done: false }]),
         });
